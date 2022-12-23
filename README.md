@@ -1,10 +1,6 @@
-# 922 Studio website
+# 922 Studio
 
 ## Development
 
 1. `export DEBUG="True"`
 2. `export DEVELOPMENT_MODE="True"`
-
-## Production
-
-1. set `DJANGO_SECRET_KEY` environment variable
