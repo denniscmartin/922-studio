@@ -1,0 +1,59 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="922 Studio, development, indie, app, iOS, web, games">
+    <meta name="description" content="Indie development studio">
+    <meta name="author" content="Dennis CM">
+    <title>922 Studio</title>
+
+    <!-- Bootstrap styles -->
+    <link rel="stylesheet" href="{% static 'bootstrap/bootstrap.min.css' %}" />
+
+    <!-- Custom styles-->
+    <link rel="stylesheet" href="{% static 'custom.css' %}" />
+</head>
+
+<body>
+    <div class="container mt-5">
+
+        <!-- Logo -->
+        <div class="d-flex justify-content-center">
+            <a href="/">
+                <img src="{% static 'images/logo.png' %}" width="200" alt="922 Studio logo" />
+            </a>
+        </div>
+
+        <!-- Content -->
+        <div class="border-top border-4 border-custom pt-5 pb-5">
+            <h1 class="fw-bold">About</h1>
+            <p class="fs-4">
+                922 Studio is a software development company established in London,
+                United Kingdom. We develop and publish apps and games. Our main focus
+                is to build stable, minimalist, useful, and fun software.
+            </p>
+            <h1 class="fw-bold">Games</h1>
+        </div>
+
+        <!-- Footer -->
+        <footer class="border-top border-2 border-custom pt-4">
+            <div class="row row-cols-auto justify-content-center">
+                <div class="col">
+                    <a href="">Youtube</a>
+                </div>
+                <div class="col">
+                    <a href="">Discord</a>
+                </div>
+                <div class="col">
+                    <a href="">Privacy</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
