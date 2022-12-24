@@ -16,10 +16,11 @@
 
     <!-- Custom styles-->
     <link rel="stylesheet" href="{% static 'custom.css' %}" />
+    <link rel="shortcut icon" type="image/jpg" href="{% static 'images/favicon.png' %}" />
 </head>
 
 <body>
-    <div class="container mt-5">
+    <div class="container my-5">
 
         <!-- Logo -->
         <div class="d-flex justify-content-center">
@@ -29,24 +30,41 @@
         </div>
 
         <!-- Content -->
-        <div class="border-top border-4 border-custom pt-5 pb-5">
-            <h1 class="fw-bold">About</h1>
-            <p class="fs-4">
-                922 Studio is a software development company established in London,
-                United Kingdom. We develop and publish apps and games. Our main focus
-                is to build stable, minimalist, useful, and fun software.
-            </p>
-            <h1 class="fw-bold">Games</h1>
+        <div class="border-top border-4 border-custom">
+
+            <!-- About -->
+            <div class="my-5">
+                <h1 class="fw-bold mb-3">About</h1>
+                <p class="fs-4">
+                    922 Studio is a software development company established in London,
+                    United Kingdom. We develop and publish apps and games. Our main focus
+                    is to build stable, minimalist, useful, and fun software.
+                </p>
+            </div>
+
+            <!-- Projects -->
+            <div class="my-5">
+                <h1 class="fw-bold mb-4">Projects</h1>
+                <div class="row row-cols-1 gy-5">
+                    {% for project in projects %}
+                    <div class="col">
+                        <a href="{{ project.url }}" target="_blank">
+                            <img class="project-img rounded-4" src={{ project.image_url }} alt="{{ project.name }} project image" />
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
         </div>
 
         <!-- Footer -->
         <footer class="border-top border-2 border-custom pt-4">
             <div class="row row-cols-auto justify-content-center">
                 <div class="col">
-                    <a href="">Youtube</a>
+                    <a href="https://www.youtube.com/channel/UCiPKQ0uPzdC8HySI496EvBg" target="_blank">Youtube</a>
                 </div>
                 <div class="col">
-                    <a href="">Discord</a>
+                    <a href="https://discord.gg/wqQw7bJQ" target="_blank">Discord</a>
                 </div>
                 <div class="col">
                     <a href="">Privacy</a>

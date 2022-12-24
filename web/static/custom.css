@@ -9,6 +9,10 @@ body {
   border-color: rgba(var(--bs-custom-rgb), var(--bs-border-opacity)) !important;
 }
 
+.project-img {
+  width: 100%;
+}
+
 @media (min-width: 1400px) {
   .container-xxl,
   .container-xl,
