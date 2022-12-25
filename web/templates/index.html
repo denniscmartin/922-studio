@@ -34,17 +34,13 @@
 
             <!-- About -->
             <div class="my-5">
-                <h1 class="fw-bold mb-3">About</h1>
-                <p class="fs-4">
-                    922 Studio is a software development company established in London,
-                    United Kingdom. We develop and publish apps and games. Our main focus
-                    is to build stable, minimalist, useful, and fun software.
-                </p>
+                <h1 class="fw-bold mb-3">922 Studio</h1>
+                <p class="fs-4">{{ introduction }}</p>
             </div>
 
             <!-- Projects -->
             <div class="my-5">
-                <h1 class="fw-bold mb-4">Projects</h1>
+                <h1 class="fw-bold mb-4">{{ sections.proyects }}</h1>
                 <div class="row row-cols-1 gy-5">
                     {% for project in projects %}
                     <div class="col">
@@ -59,15 +55,25 @@
 
         <!-- Footer -->
         <footer class="border-top border-2 border-custom pt-4">
-            <div class="row row-cols-auto justify-content-center">
-                <div class="col">
-                    <a href="https://www.youtube.com/channel/UCiPKQ0uPzdC8HySI496EvBg" target="_blank">Youtube</a>
+            <div class="row row-cols-1 row-cols-sm-2 justify-content-center justify-content-sm-between">
+                <div class="row row-cols-auto justify-content-center justify-content-sm-start">
+                    <div class="col">
+                        <a href="https://www.youtube.com/channel/UCiPKQ0uPzdC8HySI496EvBg" target="_blank">{{ footer.youtube }}</a>
+                    </div>
+                    <div class="col">
+                        <a href="https://discord.gg/hhRMg4myur" target="_blank">{{ footer.discord }}</a>
+                    </div>
+                    <div class="col">
+                        <a href="/privacy">{{ footer.privacy }}</a>
+                    </div>
                 </div>
-                <div class="col">
-                    <a href="https://discord.gg/wqQw7bJQ" target="_blank">Discord</a>
-                </div>
-                <div class="col">
-                    <a href="">Privacy</a>
+                <div class="row row-cols-auto justify-content-center justify-content-sm-end">
+                    <div class="col">
+                        <a href="/es">{{ footer.es }}</a>
+                    </div>
+                    <div class="col">
+                        <a href="/en">{{ footer.en }}</a>
+                    </div>
                 </div>
             </div>
         </footer>

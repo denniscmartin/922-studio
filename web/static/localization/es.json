@@ -1,0 +1,13 @@
+{
+  "introduction": "Somos un pequeño estudio de desarrollo independiente establecido en Tenerife, Islas Canarias. Nuestro principal objetivo es crear software estable, minimalista, útil y que también sea divertido de usar. Ya sea una aplicación o un juego, nos esforzamos por ofrecer productos de alta calidad que aporten valor a nuestros usuarios.",
+  "sections": {
+    "proyects": "Proyectos"
+  },
+  "footer": {
+    "privacy": "Privacidad",
+    "youtube": "Youtube",
+    "discord": "Discord",
+    "en": "Inglés",
+    "es": "Español"
+  }
+}
