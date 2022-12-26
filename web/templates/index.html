@@ -1,83 +1,32 @@
-{% load static %}
+{% extends "base.html" %}
+{% load i18n %}
 
-<!DOCTYPE html>
-<html lang="en-US">
+{% block title %}{% translate "Home" %}{% endblock %}
+{% block content %}
 
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="keywords" content="922 Studio, development, indie, app, iOS, web, games">
-    <meta name="description" content="Indie development studio">
-    <meta name="author" content="Dennis CM">
-    <title>922 Studio</title>
+<!-- About -->
+<div class="my-5">
+    <h1 class="fw-bold mb-3">922 Studio</h1>
+    <p class="fs-4">
+        {% blocktranslate %}
+        We are an indie studio based in the Canary Islands. At 922 Studio, we create fun games with a minimalist 
+        design to bring a unique and enjoyable gaming experience to players all over the world. We hope you will 
+        join us on this journey of creating new and exciting experiences to the indie gaming community.
+        {% endblocktranslate %}
+    </p>
+</div>
 
-    <!-- Bootstrap styles -->
-    <link rel="stylesheet" href="{% static 'bootstrap/bootstrap.min.css' %}" />
-
-    <!-- Custom styles-->
-    <link rel="stylesheet" href="{% static 'custom.css' %}" />
-    <link rel="shortcut icon" type="image/jpg" href="{% static 'images/favicon.png' %}" />
-</head>
-
-<body>
-    <div class="container my-5">
-
-        <!-- Logo -->
-        <div class="d-flex justify-content-center">
-            <a href="/">
-                <img src="{% static 'images/logo.png' %}" width="200" alt="922 Studio logo" />
+<!-- Projects -->
+<div class="my-5">
+    <h1 class="fw-bold mb-4">{% translate "Projects" %}</h1>
+    <div class="row row-cols-1 gy-5">
+        {% for project in projects %}
+        <div class="col">
+            <a href="{{ project.url }}" target="_blank">
+                <img class="project-img rounded-4" src={{ project.image_url }} alt="{{ project.name }} project image" />
             </a>
         </div>
-
-        <!-- Content -->
-        <div class="border-top border-4 border-custom">
-
-            <!-- About -->
-            <div class="my-5">
-                <h1 class="fw-bold mb-3">922 Studio</h1>
-                <p class="fs-4">{{ introduction }}</p>
-            </div>
-
-            <!-- Projects -->
-            <div class="my-5">
-                <h1 class="fw-bold mb-4">{{ sections.proyects }}</h1>
-                <div class="row row-cols-1 gy-5">
-                    {% for project in projects %}
-                    <div class="col">
-                        <a href="{{ project.url }}" target="_blank">
-                            <img class="project-img rounded-4" src={{ project.image_url }} alt="{{ project.name }} project image" />
-                        </a>
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
-
-        <!-- Footer -->
-        <footer class="border-top border-2 border-custom pt-4">
-            <div class="row row-cols-1 row-cols-sm-2 justify-content-center justify-content-sm-between">
-                <div class="row row-cols-auto justify-content-center justify-content-sm-start">
-                    <div class="col">
-                        <a href="https://www.youtube.com/channel/UCiPKQ0uPzdC8HySI496EvBg" target="_blank">{{ footer.youtube }}</a>
-                    </div>
-                    <div class="col">
-                        <a href="https://discord.gg/hhRMg4myur" target="_blank">{{ footer.discord }}</a>
-                    </div>
-                    <div class="col">
-                        <a href="/privacy">{{ footer.privacy }}</a>
-                    </div>
-                </div>
-                <div class="row row-cols-auto justify-content-center justify-content-sm-end">
-                    <div class="col">
-                        <a href="/es">{{ footer.es }}</a>
-                    </div>
-                    <div class="col">
-                        <a href="/en">{{ footer.en }}</a>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        {% endfor %}
     </div>
-</body>
-
-</html>
+</div>
+{% endblock %}

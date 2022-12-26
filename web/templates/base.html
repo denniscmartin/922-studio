@@ -1,0 +1,66 @@
+{% load static %}
+{% load i18n %}
+
+{% get_available_languages as languages %}
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="922 Studio, development, indie, app, iOS, web, games">
+    <meta name="description" content="Indie development studio">
+    <meta name="author" content="Dennis CM">
+
+    <!-- Bootstrap styles -->
+    <link rel="stylesheet" href="{% static 'bootstrap/bootstrap.min.css' %}" />
+
+    <!-- Custom styles-->
+    <link rel="stylesheet" href="{% static 'custom.css' %}" />
+    <link rel="shortcut icon" type="image/jpg" href="{% static 'images/favicon.png' %}" />
+    <title>{% block title %}{% endblock %} - 922 Studio</title>
+</head>
+
+<body>
+    <div class="container my-5">
+
+        <!-- Logo -->
+        <div class="d-flex justify-content-center">
+            <a href="{% url 'index'%}">
+                <img src="{% static 'images/logo.png' %}" width="200" alt="922 Studio logo" />
+            </a>
+        </div>
+
+        <!-- Content -->
+        <div class="border-top border-4 border-custom">{% block content %}{% endblock %}</div>
+
+        <!-- Footer -->
+        <footer class="border-top border-2 border-custom pt-4">
+            <div class="row row-cols-1 row-cols-sm-2 justify-content-center justify-content-sm-between">
+                <div class="row row-cols-auto justify-content-center justify-content-sm-start">
+                    <div class="col">
+                        <a href="https://www.youtube.com/channel/UCiPKQ0uPzdC8HySI496EvBg" target="_blank">Youtube</a>
+                    </div>
+                    <div class="col">
+                        <a href="https://discord.gg/hhRMg4myur" target="_blank">Discord</a>
+                    </div>
+                    <div class="col">
+                        <a href="{% url 'privacy'%}">{% translate "Privacy" %}</a>
+                    </div>
+                </div>
+                <div class="row row-cols-auto justify-content-center justify-content-sm-end">
+                    {% for lang_code, lang_name in languages %}
+                    {% language lang_code %}
+                    <div class="col">
+                        <a href="{% url 'index'%}">{{ lang_name }}</a>
+                    </div>
+                    {% endlanguage %}
+                    {% endfor %}
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

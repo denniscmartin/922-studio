@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% translate "Privacy" %}{% endblock %}
+{% block content %}
+
+<!-- About -->
+<div class="my-5">
+    <h1 class="fw-bold mb-3">Privacy</h1>
+    <p class="fs-4">
+        {% blocktranslate %}
+        We are 922 Studio, an indie studio located in Tenerife, Canary Islands. We develop our games independently and publish 
+        them to a various markets worldwide, such as the App Store and Steam.<br><br>
+
+        Our games do not collect any data from you, apart from:<br>
+        - Locally storing your information in your own device and on Apple’s iCloud.<br>
+        - We use third-party services to handle subscriptions and purchases. These services may collect basic information from 
+        you to process the payment successfully.<br><br>
+        
+        This website does not track you or your cookies, and does not ask for any information that can be used to identify you.
+        {% endblocktranslate %}
+    </p>
+</div>
+{% endblock %}

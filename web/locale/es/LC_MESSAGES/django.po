@@ -1,0 +1,75 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-26 09:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: templates/base.html:49 templates/privacy.html:4
+msgid "Privacy"
+msgstr "Privacidad"
+
+#: templates/index.html:4
+msgid "Home"
+msgstr "Inicio"
+
+#: templates/index.html:11
+msgid ""
+"\n"
+"        We are an indie studio based in the Canary Islands. At 922 Studio, "
+"we create fun games with a minimalist \n"
+"        design to bring a unique and enjoyable gaming experience to players "
+"all over the world. We hope you will \n"
+"        join us on this journey of creating new and exciting experiences to "
+"the indie gaming community.\n"
+"        "
+msgstr "\n"
+"Somos un estudio independiente establecido en las Islas Canarias. En 922 Studio, creamos juegos"
+"divertidos con un diseño minimalista para ofrecer una experiencia única y agradable a usuarios "
+"de todo el mundo. Esperamos que te unas a este proyecto y nos acompañes en la creación de nuevas "
+"experiencias para la comunidad de juegos indie."
+
+#: templates/index.html:21
+msgid "Projects"
+msgstr "Proyectos"
+
+#: templates/privacy.html:11
+msgid ""
+"\n"
+"        We are 922 Studio, an indie studio located in Tenerife, Canary "
+"Islands. We develop our games independently and publish \n"
+"        them to a various markets worldwide, such as the App Store and Steam."
+"<br><br>\n"
+"\n"
+"        Our games do not collect any data from you, apart from:<br>\n"
+"        - Locally storing your information in your own device and on Apple’s "
+"iCloud.<br>\n"
+"        - We use third-party services to handle subscriptions and purchases. "
+"These services may collect basic information from \n"
+"        you to process the payment successfully.<br><br>\n"
+"        \n"
+"        This website does not track you or your cookies, and does not ask "
+"for any information that can be used to identify you.\n"
+"        "
+msgstr "\n"
+"Somos 922 Studio, un estudio independiente ubicado en Tenerife, Islas Canarias. Desarrollamos nuestros "
+"juegos de forma independiente y los publicamos en varios mercados de todo el mundo, como la App Store y Steam."
+"<br><br>\n"
+"Nuestros juegos no recogen ningún tipo de información sobre ti, aparte de: <br>"
+"- El almacenamiento local de tus datos en tu propio dispositivo y en Apple iCloud.<br>"
+"- Utilizamos servicios de terceros para gestionar las suscripciones y las compras. Estos servicios pueden recopilar "
+"información básica de ti para procesar el pago con éxito.<br><br>"
+"Este sitio web no te rastrea ni recopila información que pueda utilizarse para identificarte."
